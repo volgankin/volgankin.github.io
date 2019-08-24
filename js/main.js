@@ -42,7 +42,7 @@
 
   var stringToNumber = function (amount) {
     var stringValue = '';
-    for (var j = 0; j < amount.length; j++){
+    for (var j = 0; j < amount.length; j++) {
       var char = amount[j];
       if (char === ',') {
         char = '.';
@@ -63,16 +63,16 @@
   };
 
   var outputResult = function (distance, season) {
-    checksAmountsResult.textContent = summInChecks.toFixed(2);//рисуем сумму по чекам
-    checksLitrsResult.textContent = litrsInChecks.toFixed(2);//рисуем литры по чекам
-    checksAverageLitrResult.textContent = averageSummLitr.toFixed(2);//рисуем среднюю стоимость за литр
+    checksAmountsResult.textContent = summInChecks.toFixed(2);
+    checksLitrsResult.textContent = litrsInChecks.toFixed(2);
+    checksAverageLitrResult.textContent = averageSummLitr.toFixed(2);
     summResult.textContent = (averageSummLitr.toFixed(2) * distance * season / 100).toFixed(2);
   };
 
   var calculateChecks = function (checksAmounts, checksLitrs) {
-    summInChecks = getEnumerationValues(checksAmounts);//вычисляем сумму по чекам
-    litrsInChecks = getEnumerationValues(checksLitrs);//вычисляем литры по чекам
-    averageSummLitr = summInChecks.toFixed(2) / litrsInChecks.toFixed(2);//вычисляем средее за литр
+    summInChecks = getEnumerationValues(checksAmounts);
+    litrsInChecks = getEnumerationValues(checksLitrs);
+    averageSummLitr = summInChecks.toFixed(2) / litrsInChecks.toFixed(2);
   };
 
   var onCalculate = function (evt) {
