@@ -87,7 +87,7 @@
     var season = document.querySelector('.fuel-consumption-value').value;
     season = stringToNumber(season);
 
-    outputResult(distance, season);
+    outputResult(stringToNumber(distance), season);
   };
 
   buttonChecks.addEventListener('click', onCreateField);
